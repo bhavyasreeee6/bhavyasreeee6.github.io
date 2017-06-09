@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+                <title>Page 3</title>
+
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+                <link rel="stylesheet" href="health.css">
+
+                <script type="text/javascript" src="angular.min.js"></script>
+
+                <script type="text/javascript" src="fusioncharts.js"></script>
+
+                <script type="text/javascript" src="angular-fusioncharts.min.js"></script>
+
+                <script type="text/javascript" src="fusioncharts.charts.js"></script>
+
+               
+
+<body>
+
+ 
+
+<div ng-app="myApp" ng-controller="myCtrl" class="mainBody">
+
+                <div class="floatLeft">
+
+                                <img src="backButton.jpg"/>
+
+                </div>
+
+                <div class="floatRight">
+
+                                <img src="annoymous.jpg"/>
+
+                </div>
+
+ 
+
+                <div class="positionRelative">
+
+                                <div fusioncharts
+
+                                   width="350"
+
+                                   height="400"
+
+                                   type="area2d"
+
+                                   dataSource="{{myDataSource}}" >
+
+                                </div>
+
+                                <div class="showInsideGraph">
+
+                                                <div class="floatLeft">
+
+                                                                <p>Feb 5 2015</p>
+
+                                                                <p>57.5 Kg</p>
+
+                                                                <p>Max Weight</p>
+
+                                                </div>
+
+                                               
+
+                                                <div class="floatRight">
+
+                                                                <p>July 14 2015</p>
+
+                                                                <p>53.5 Kg</p>
+
+                                                                <p>Min Weight</p>
+
+                                                </div>
+
+                                </div>
+
+                </div>
+
+               
+
+</div>
+
+ 
+
+<script type="text/javascript">
+
+                                var app = angular.module("myApp", ["ng-fusioncharts"]);
+
+                               
+
+                                app.controller('myCtrl', function ($scope) {
+
+              $scope.myDataSource = {
+
+                chart: {
+
+                    "caption": "June 4 2015",
+
+                                                                                "subCaption": "54.7 kg",
+
+                                                                                "xAxisName": "Month",
+
+                                                                                "yAxisName": "Weight",
+
+                                                                                "numberPrefix": "$",
+
+                                                                                "paletteColors": "#5cc8ec",//Graph color
+
+                                                                                "bgColor": "#ffffff",
+
+                                                                                "showBorder": "0",
+
+                                                                                "showCanvasBorder": "0",
+
+                                                                                "plotBorderAlpha": "10",
+
+                                                                                "usePlotGradientColor": "0",
+
+                                                                                "plotFillAlpha": "50",
+
+                                                                                "showYAxisValues": "0",
+
+                                                                                "showXAxisLine": "0",
+
+                                                                                "axisLineAlpha": "25",
+
+                                                                                "divLineAlpha": "10",
+
+                                                                                "showValues": "0",
+
+                                                                                "showAlternateHGridColor": "0",
+
+                                                                                "captionFontSize": "10",
+
+                                                                                "subcaptionFontSize": "24",
+
+                                                                                "subcaptionFontBold": "0",
+
+                                                                                "toolTipColor": "#ffffff",
+
+                                                                                "toolTipBorderThickness": "0",
+
+                                                                                "toolTipBgColor": "#000000",
+
+                                                                                "toolTipBgAlpha": "80",
+
+                                                                                "toolTipBorderRadius": "2",
+
+                                                                                "toolTipPadding": "5"
+
+                },
+
+                data:[{
+
+                    label: "Feb",
+
+                    value: "150"
+
+                },
+
+                {
+
+                    label: "Mar",
+
+                    value: "100"
+
+                },
+
+                {
+
+                    label: "Apr",
+
+                    value: "90"
+
+                },
+
+                {
+
+                    label: "May",
+
+                    value: "120"
+
+                },
+
+                {
+
+                    label: "June",
+
+                    value: "85"
+
+                },
+
+                                                                {
+
+                    label: "July",
+
+                    value: "54.7"
+
+                },
+
+                                                                {
+
+                    label: "Aug",
+
+                    value: "54"
+
+                }]
+
+              };
+
+            });
+
+                </script>
+
+</body>
+
+</html>
+
+ 
